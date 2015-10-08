@@ -33,10 +33,10 @@
     Private Sub hitung()
         Me.Angka2 = Convert.ToInt32(Me.resultText.Text)
         Select Case Me.operasi
-            Case "Tambah"
+            Case "+"
                 Me.Angka1 = (Me.Angka1 + Me.Angka2)
                 Exit Select
-            Case "Kurang"
+            Case "-"
                 Me.Angka1 = (Me.Angka1 - Me.Angka2)
                 Exit Select
         End Select
@@ -53,8 +53,8 @@
 
     Private Sub Button0_Click(sender As Object, e As EventArgs) Handles Button0.Click
         If (Me.status AndAlso (Me.resultText.Text <> "0")) Then
-            Dim outputText As TextBox = Me.resultText
-            outputText.Text = (outputText.Text & "0")
+            Dim resultText As TextBox = Me.resultText
+            resultText.Text = (resultText.Text & "0")
         End If
     End Sub
 
@@ -94,15 +94,15 @@
         Me.input("9")
     End Sub
 
-    Private Sub minButton_Click(sender As Object, e As EventArgs) Handles kurangButton.Click
-        Me.inputOperator("Kurang")
+    Private Sub kurangButton_Click(sender As Object, e As EventArgs) Handles kurangButton.Click
+        Me.inputOperator("-")
     End Sub
 
-    Private Sub plusButton_Click(sender As Object, e As EventArgs) Handles tambahButton.Click
-        Me.inputOperator("Tambah")
+    Private Sub tambahButton_Click(sender As Object, e As EventArgs) Handles tambahButton.Click
+        Me.inputOperator("+")
     End Sub
 
-    Private Sub equalsButton_Click(sender As Object, e As EventArgs) Handles samaDenganButton.Click
+    Private Sub samaDenganButton_Click(sender As Object, e As EventArgs) Handles samaDenganButton.Click
         If ((Me.resultText.Text <> "0") And (Me.Angka1 <> 0)) Then
             Me.hitung()
             Me.operasi = String.Empty

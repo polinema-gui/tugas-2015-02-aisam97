@@ -52,6 +52,7 @@ Partial Class Form1
         'resultText
         '
         Me.resultText.Location = New System.Drawing.Point(12, 12)
+        Me.resultText.MaxLength = 10
         Me.resultText.Name = "resultText"
         Me.resultText.ReadOnly = True
         Me.resultText.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -202,6 +203,7 @@ Partial Class Form1
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Kalkulator"
